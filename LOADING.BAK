@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+#include<stdlib.h>
+void main()
+{
+	int gd=DETECT,gm,i;
+	initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+		setcolor(WHITE);
+		for(i=35;i<555;i++)
+		{
+		line(25+i,390,25+i,400);
+		}
+
+		for(i=10;i<555;i++)
+		{
+		setcolor(GREEN);
+		line(25+i,390,25+i,400);
+		delay(2);
+
+		setcolor(WHITE);
+		settextstyle(SMALL_FONT,0,16);
+		outtextxy(220,400,"LOADING");
+		delay(2);
+
+		setcolor(rand()%17);
+		settextstyle(SMALL_FONT,HORIZ_DIR,16);
+		outtextxy(380,400,"...");
+		delay(2);
+
+
+
+		}closegraph();
+
+
+getch();
+
+}
